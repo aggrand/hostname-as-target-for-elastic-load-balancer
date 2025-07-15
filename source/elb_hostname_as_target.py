@@ -188,7 +188,6 @@ def lambda_handler(event, context):
 
     # Exception handler
     except Exception as e:
-        logger.error("ERROR:", e)
-        logger.error("ERROR: Invocation failed.")
+        logger.exception("ERROR: Invocation failed.")
         return(1)
     return (0)
